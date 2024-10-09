@@ -1,36 +1,14 @@
-import Stylesheet from "./page.module.css"
 import Link from "next/link";
-export default function HomePage (){
-  return (
-    <>
-    <header>
-    <nav className={Stylesheet.navbar}>
-     <h3 className={Stylesheet.logo}>Next App</h3>
-      <ul className={Stylesheet.anchor}>
-        <li><Link href="/home">Home</Link></li>
-        <li><Link href="/about">About</Link></li>
-        <li><Link href="/contact">Contact</Link></li>
-      </ul>  
-    </nav>
-    <nav className={Stylesheet.navbar2}>
-    <ul className={Stylesheet.anchor2}>
-        <li><Link href="/home">Home</Link></li>
-        <li><Link href="/about">About</Link></li>
-        <li><Link href="/contact">Contact</Link></li>
-      </ul> 
-    </nav>
-    </header>
-    <main>
-    <div className={Stylesheet.container}>
-      <div className={Stylesheet.container2}>
-      <h1>Welcome to my Home Page</h1>
-      <p>This is a simple Next.js page with a heading and a paragraph.</p>
-      </div>
-    </div>
-    </main>
-    <footer className={Stylesheet.footer}>
-      <p>&copy; 2024 Next App. All rights reserved.</p> 
-      </footer>
-    </>
-  );
+import Style from "./page.module.css";
+export default function MoreAboutPage (){
+    return (
+        <main className={Style.container}>
+            <h1>for About Visit My Account</h1>
+            <div className={Style.container2}>
+                <button className={Style.button1}><Link href="https://github.com/khadija-faisal">Github</Link></button>
+                <button className={Style.button2}><Link href="https://www.linkedin.com/in/khadijamughal19/">LinkedIn</Link></button>
+            </div>
+           <button className={Style.button3}><Link href="/about">About</Link></button>
+        </main>
+    );
 }
